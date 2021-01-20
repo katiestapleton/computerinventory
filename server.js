@@ -1,3 +1,5 @@
+//simple runthrough
+
 const express = require('express')
 const app = express()
 const port = 3000
@@ -23,10 +25,6 @@ app.put('/hello', (req, res) => {
 
 app.delete('/hello', (req, res) => {
   res.send('DELETE- Hello World!')
-})
-
-app.('/hello', (req, res) => {
-  res.send(' Hello World!')
 })
 
 app.listen(port, () => {
