@@ -1,10 +1,11 @@
-/*const http = require('http');
+const express = require('express')
+const app = express()
+const port = 3000
 
-//create a server object:
-http.createServer(function (req, res) {
-  //write a response to the client
-  res.write('Hello from the Node server on your computer'); 
-  res.end(); //end the response
-}).listen(8081); //the server object listens on port 8081
-*/
-console.log("hello")
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`)
+})
